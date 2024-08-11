@@ -42,6 +42,12 @@ export const pokemons = [
         rarity: rarity.RARE
     },
     {
+        id: 10,
+        name: 'Caterpie',
+        type: ['Bug'],
+        rarity: rarity.COMMON
+    },
+    {
         id: 150,
         name: 'Mewtwo',
         type: ['Phisyic'],

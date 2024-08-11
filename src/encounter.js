@@ -1,7 +1,7 @@
-import { generateLuckyNumber } from './utils.js'
+import { generateRandomRarity, getRandomPokemonByRarity } from './utils.js'
 
 export function generateRandomEncounter() {
-    const luckyNumber = generateLuckyNumber()
-
-    console.log(luckyNumber)
+    const rarity = generateRandomRarity()
+    const pokemon = getRandomPokemonByRarity(rarity.name)
+    return pokemon
 }

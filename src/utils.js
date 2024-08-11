@@ -1,4 +1,4 @@
-import { rarity } from "./library";
+import { pokemons, rarity } from "./library.js";
 
 export function generateLuckyNumber() {
     return Math.random() * 100;
@@ -14,4 +14,12 @@ export function generateRandomRarity() {
     } else {
         return rarity.LEGENDARY
     }
+}
+
+export function getRandomPokemonByRarity(rarity) {
+    const pokemonsFromRarity = pokemons.filter(pokemon => pokemon.rarity.name === rarity)
+
+    const pokemonIndex =  Math.floor(Math.random() * (pokemonsFromRarity.length - 1 + 1)) + 1;
+
+    return pokemonsFromRarity[pokemonIndex - 1]
 }
