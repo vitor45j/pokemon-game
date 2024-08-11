@@ -1,3 +1,27 @@
+export const rarity = {
+    COMMON: {
+        name: 'common',
+        spawnRate: {
+            from: 0,
+            to: 70
+        }
+    },
+    RARE: {
+        name: 'rare',
+        spawnRate: {
+            from: 70,
+            to: 99.5
+        }
+    },
+    LEGENDARY: {
+        name: 'legendary',
+        spawnRate: {
+            from: 99.5,
+            to: 100 
+        }
+    }
+}
+
 export const pokemons = [
     {
         id: 1,
@@ -20,7 +44,8 @@ export const pokemons = [
     {
         id: 150,
         name: 'Mewtwo',
-        type: ['Phisyic']
+        type: ['Phisyic'],
+        rarity: rarity.LEGENDARY
     }
 ]
 
@@ -31,18 +56,3 @@ export const items = [
         type: 'Pokeball'
     }
 ]
-
-export const rarity = {
-    COMMON: {
-        name: 'common',
-        spawnRate: 70,
-    },
-    RARE: {
-        name: 'rare',
-        spawnRate: 29.9
-    },
-    LEGENDARY: {
-        name: 'legendary',
-        spawnRate: 0.1
-    }
-}
