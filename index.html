@@ -6,6 +6,15 @@
     <title>Pokemon Game</title>
 </head>
 <body>
-    <script type="module" src="./src/game.js"></script>
+    <main style="width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;">
+        <img id="encounter-image" src="" alt="" />
+    </main>
+    <script type="module">
+        import { Game } from './src/game.js'
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new Game();
+        })
+    </script>
 </body>
 </html>

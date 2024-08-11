@@ -27,7 +27,7 @@ export const pokemons = [
         id: 1,
         name: 'Bulbasaur',
         type: ['Grass'],
-        rarity: rarity.RARE
+        rarity: rarity.RARE,
     },
     {
         id: 4,

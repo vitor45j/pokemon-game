@@ -1,7 +1,8 @@
-import { generateRandomEncounter } from "./encounter.js";
+import { encounterState, generateRandomEncounter } from "./encounter.js";
 import { bootstrapInventory } from "./inventory.js";
 
-class Game {
+
+export class Game {
     constructor() {
         this.startGame()
     }
@@ -9,7 +10,6 @@ class Game {
     startGame() {
         bootstrapInventory()
         generateRandomEncounter()
+        document.getElementById('encounter-image').setAttribute('src', `/assets/pokemons/${encounterState.pokemon.id}.png`)
     }
 }
-
-new Game()
